@@ -100,6 +100,11 @@ transition property, **separated by commas**:
   transition: background-color 500ms easein 250ms,
               color 250ms easeout 400ms;
 }
+
+.button:hover {
+  background-color: #39A38F;
+  color: #999;
+}
 ```
 
 ## Tips
