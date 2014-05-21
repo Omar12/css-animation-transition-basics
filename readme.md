@@ -1,22 +1,4 @@
-Goals
-* Make an understanding of how transitions work
-* Provide a baseline code to get it started
-* Provide inspiration and examples
-* Provide learnings and tips from around the web
-* Provide a gallery of good examples and an explanation of whats happening
-* Make any code block a working snippet
-* Deadline: Sunday, May 18.
-
 # Transition and Animation Basics
-
-The purpose of this document is to have a quick and simple guide into
-CSS Transitions and Animations. It will include the following:
-
-* Basics
-* Best Practices
-* Tips
-* Tools
-
 
 ## Introduction
 Now we can animate UI elements and events using only CSS. Before *animations* and
@@ -42,10 +24,7 @@ can add them yourself.
      -o-transition: ...;
         transition: ...;
 ```
-
-## Basics
-
-### Transitions
+## Transitions
 We use transition when we want to have an animated transition between one state to
 another. We would see use it on a `:hover` event, but it can be between an
 appended CSS class (`.element.active`).
@@ -53,23 +32,19 @@ appended CSS class (`.element.active`).
 ### Syntax
 
 ```css
-transition-property: <property>; /* default: all */
-transition-duration: <duration>; /* default: 0s */
-transition-easing: <easing function>; /* default: ease */
-transition-delay: <delay>; /* default: 0s */
-
-/* shorthand for single transition */
-transition: <property> <duration> <easing function> <delay>;
+transition: <transition-property> <transition-duration> <transition-timing-function> <transition-delay>;
 ```
 
-| Property        | Value(s)                                                      | Example          |
-| --------------- | ------------------------------------------------------------- | ---------------- |
-| property        | single CSS property or `all`                                  | `color`          |
-| duration        | positive number in ms or s                                    | `1.2s`           |
-| easing function | `ease`, `linear`, `easein`, `easeout`, `cubic-bezier(timing)` | `cubic-bezier()` |
-| delay           | positive number in ms or s                                    | `500ms`          |
+| Property                   | Value(s)                                                      | Example          |
+| -------------------------- | ------------------------------------------------------------- | ---------------- |
+| transition-property        | single CSS property or `all`                                  | `color`          |
+| transition-duration        | positive number in ms or s                                    | `1.2s`           |
+| transition-timing-function | `ease`, `linear`, `easein`, `easeout`, `cubic-bezier(timing)` | `cubic-bezier()` |
+| transition-delay           | positive number in ms or s                                    | `500ms`          |
 
-For more easing functions, you can find a collection of commonly used easings [here](http://easings.net/), or if
+*(For more information and the longhand format, [click here](https://developer.mozilla.org/en-US/docs/Web/CSS/transition))*
+
+For timing functions, you can find a collection of commonly used easings [here](http://easings.net/), or if
 you want to build your own, you can try it [here](http://cubic-bezier.com/).
 
 ### Examples
@@ -106,6 +81,75 @@ transition property, **separated by commas**:
   color: #999;
 }
 ```
+
+## Animations
+
+### Syntax
+
+```css
+animation: <animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation-iteration-count> <animation-direction> <animation-fill-mode>;
+```
+
+| Property                    | Value(s)                                                      | Example           |
+| --------------------------- | ------------------------------------------------------------- | ----------------- |
+| `animation-name`            | name that matches the @keyframes name                         | `spinning`        |
+| `animation-duration`        | positive number in ms or s                                    | `1.2s`            |
+| `animation-timing-function` | `ease`, `linear`, `easein`, `easeout`, `cubic-bezier(timing)` | `cubic-bezier()`  |
+| `animation-delay`           | positive number in ms or s                                    | `500ms`           |
+| `animation-iteration-count` | `infinite`, number `1` or non-integer (`0.5`, `1.3`)          | `3`               |
+| `animation-direction`       | `normal`, `reverse`, `alternate`, `alternate-reverse`         | `normal, reverse` |
+| `animation-fill-mode`       | `none`, `forwards`, `backwards`, `both`                       | `both`            |
+
+*(For more information and the longhand format, [click here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation))*
+
+**Keyframes and <animation-name>
+
+To properly use animation, you will need to define an animation by using the `@keyframes`
+property and giving it a name.
+
+```css
+@keyframes to-from-anim {
+  to {...}
+  from {...}
+}
+
+@keyframes perc-anim {
+  0% {...}
+  25% {...}
+  50% {...}
+  100% {...}
+}
+```
+
+### Examples
+
+**Basic Example:**
+
+```css
+.loader {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  animation-fill-mode: both;
+  animation: circlemove 1.8s infinite ease-in-out;
+}
+
+@keyframes shrinkcircle {
+  0%,
+  80%,
+  100% {
+    left: 0;
+  }
+  40% {
+    left: 100%;
+  }
+}
+```
+
+
+
+
 
 ## Tips
 ### Visual
