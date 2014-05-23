@@ -3,7 +3,7 @@
 ## Introduction
 Now we can animate UI elements and events using only CSS. Before *animations* and
 *transitions* were part of the CSS spec, we had to animate only using JavaScript.
-*3D Tranforms* were also added to the spec, giving CSS devs more tools to bring
+*3D Transforms* were also added to the spec, giving CSS devs more tools to bring
 animations to life. As with any new spec implemented with web browsers, we had
 to proceed with caution. Mainly for cross browser support and also for poor performance.
 Thankfully, browser developers took a serious consideration to optimize this spec.
@@ -135,7 +135,7 @@ property and giving it a name.
   animation: circlemove 1.8s infinite ease-in-out;
 }
 
-@keyframes shrinkcircle {
+@keyframes circlemove {
   0%,
   80%,
   100% {
