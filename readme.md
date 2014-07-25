@@ -25,9 +25,9 @@ can add them yourself.
         transition: ...;
 ```
 ## Transitions
-We use transition when we want to have an animated transition between one state to
-another. We would see use it on a `:hover` event, but it can be between an
-appended CSS class (`.element.active`).
+Transtions are used when we want to animate from one state to
+another. We would see use it on a `:hover` event, or with an appended CSS
+class (`.element.active`).
 
 ### Syntax
 
@@ -44,8 +44,9 @@ transition: <transition-property> <transition-duration> <transition-timing-funct
 
 *(For more information and the longhand format, [click here](https://developer.mozilla.org/en-US/docs/Web/CSS/transition))*
 
-For timing functions, you can find a collection of commonly used easings [here](http://easings.net/), or if
-you want to build your own, you can try it [here](http://cubic-bezier.com/).
+#### Timing Functions
+* [Easings.net](http://easings.net/) - List of Easings functions and values.
+* [Cubic-Bezier.com](http://cubic-bezier.com/) - Build and try your own easing.
 
 ### Examples
 
