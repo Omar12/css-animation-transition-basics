@@ -13,10 +13,10 @@ This document is intended to provide a clear understanding and implementation of
 tips from experts regarding how to implement motion to websites, performance tips
 and others. You will also find my takeaway from the articles and tools listed.
 
-**Note:** For the sake of ease of reading, I will be omitting the vendor prefixes.
-Depending on your workflow, you can use [Autoprefixer](https://github.com/ai/autoprefixer),
-which will parse your CSS and add the prefixes for you (highly recommended), or you
-can add them yourself.
+**Note:** Vendor prefixes are being omitted.
+I advise to integrate to your workflow [Autoprefixer](https://github.com/ai/autoprefixer),
+it will parse your CSS and add the prefixes for you (highly recommended). Of course,
+you can add them yourself.
 
 ```css
 -webkit-transition: ...;
@@ -65,7 +65,7 @@ transition: <transition-property> <transition-duration> <transition-timing-funct
 
 **Multiple Transitions Example:**
 
-If you wish to have multiple transitions on a single element, you declare a single
+If you wish to have **multiple transitions** on a single element, you declare a single
 transition property, **separated by commas**:
 
 ```css
@@ -73,6 +73,7 @@ transition property, **separated by commas**:
 .button {
   background-color: #0896FF;
   color: #333
+  /* transition background-color and color at different durations */
   transition: background-color 500ms easein 250ms,
               color 250ms easeout 400ms;
 }
@@ -156,7 +157,7 @@ property and giving it a name.
 ### Visual
 * [The 12 Principles of Animation](http://www.subtraction.com/2014/05/04/the-12-principles-of-animation/): [here](https://vimeo.com/93206523) or [here](http://the12principles.tumblr.com/)
 * [Nobody Expects 3D](http://aerotwist.com/tutorials/protip-nobody-expects-3d/)
-  * TLDR: They 'umpf' your transitions on the screen.
+  * TLDR: Tips to make your transitions buttery smooth.
 
 ### Performance
 * <http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/>
