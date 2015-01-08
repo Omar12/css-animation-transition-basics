@@ -161,6 +161,7 @@ property and giving it a name.
 
 ### Performance
 * <http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/>
+* <http://csstriggers.com/>
 
 ## Tools
 * <http://framerjs.com/>
