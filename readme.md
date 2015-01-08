@@ -104,7 +104,7 @@ animation: <animation-name> <animation-duration> <animation-timing-function> <an
 
 *(For more information and the longhand format, [click here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation))*
 
-**Keyframes and <animation-name>
+**Keyframes and `<animation-name>`**
 
 To properly use animation, you will need to define an animation by using the `@keyframes`
 property and giving it a name.
