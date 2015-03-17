@@ -35,12 +35,12 @@ class (`.element.active`).
 transition: <transition-property> <transition-duration> <transition-timing-function> <transition-delay>;
 ```
 
-| Property                   | Value(s)                                                      | Example          |
-| -------------------------- | ------------------------------------------------------------- | ---------------- |
-| transition-property        | single CSS property or `all`                                  | `color`          |
-| transition-duration        | positive number in ms or s                                    | `1.2s`           |
-| transition-timing-function | `ease`, `linear`, `easein`, `easeout`, `cubic-bezier(timing)` | `cubic-bezier()` |
-| transition-delay           | positive number in ms or s                                    | `500ms`          |
+| Property                   | Value(s)                                                        | Example          |
+| -------------------------- | --------------------------------------------------------------- | ---------------- |
+| transition-property        | single CSS property or `all`                                    | `color`          |
+| transition-duration        | positive number in ms or s                                      | `1.2s`           |
+| transition-timing-function | `ease`, `linear`, `ease-in`, `ease-out`, `cubic-bezier(timing)` | `cubic-bezier()` |
+| transition-delay           | positive number in ms or s                                      | `500ms`          |
 
 *(For more information and the longhand format, [click here](https://developer.mozilla.org/en-US/docs/Web/CSS/transition))*
 
