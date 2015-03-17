@@ -55,7 +55,7 @@ transition: <transition-property> <transition-duration> <transition-timing-funct
 ```css
 .button {
   background-color: #0896FF;
-  transition: all 500ms easein 250ms;
+  transition: all 500ms ease-in 250ms;
 }
 
 .button:hover {
@@ -74,7 +74,7 @@ transition property, **separated by commas**:
   background-color: #0896FF;
   color: #333
   /* transition background-color and color at different durations */
-  transition: background-color 500ms easein 250ms,
+  transition: background-color 500ms ease-in 250ms,
               color 250ms easeout 400ms;
 }
 
